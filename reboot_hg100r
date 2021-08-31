@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from hg100r import get_token, get_wan_ipv4
+from hg100r import get_token, reboot_router
 
 if __name__ == '__main__':
     import argparse
@@ -14,6 +14,6 @@ if __name__ == '__main__':
     hashed_password = args.hashed_password
 
     token = get_token(api_url=api_url, hashed_password=hashed_password)
-    ipv4_addr = get_wan_ipv4(api_url=api_url, token=token)
+    ret = reboot_router(api_url=api_url, token=token)
 
-    print(ipv4_addr)
+    print(ret)
