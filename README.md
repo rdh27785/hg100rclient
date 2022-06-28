@@ -26,7 +26,7 @@ hg100r logout
 
 |key|example|
 |:--|:--|
-|HG100R_ROUTER_URL|http://192.168.15.1|
+|HG100R_ROUTER_URL|http://192.168.0.1|
 |HG100R_PASSWORD|password|
 
 
