@@ -1,6 +1,6 @@
-# HG100RTools
+# aoirint_hg100rclient
 
-CATV回線用インターネットモデムHUMAX HG100R-02JGをHTTP API経由で操作するためのコマンド/スクリプト。
+CATV回線用インターネットモデムHUMAX HG100R-02JGをHTTP API経由で操作するための非公式パッケージ。
 
 ## Usage
 ルータIP`192.168.0.1`、Adminパスワード`password`は適宜置換。

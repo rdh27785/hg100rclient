@@ -1,3 +1,5 @@
+__VERSION__ = '0.0.0'
+
 from .get_salt import get_salt
 from .get_hashed_password import get_hashed_password
 from .get_token import get_token
