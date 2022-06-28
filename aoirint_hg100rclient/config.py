@@ -6,6 +6,9 @@ from pydantic import BaseModel, parse_obj_as
 
 CONFIG_PATH = Path(os.path.expanduser('~/.hg100rclientrc'))
 
+class ConfigNotExistError(Exception):
+  pass
+
 class Config(BaseModel):
   router_url: str
   password: str
@@ -21,7 +24,7 @@ def load_config() -> Config:
     )
 
   if not CONFIG_PATH.exists():
-    raise Exception('Config not exist. Call interactive_config()')
+    raise ConfigNotExistError('Config not exist. Call interactive_config()')
 
   with open(CONFIG_PATH, 'r', encoding='utf-8') as fp:
     return parse_obj_as(Config, json.load(fp))
@@ -34,9 +37,12 @@ def remove_config():
   CONFIG_PATH.unlink(missing_ok=True)
 
 def interactive_config(skip_ifexist: bool=True):
-  if skip_ifexist and CONFIG_PATH.exists():
-    # TODO: validate auth
-    return
+  try:
+    load_config()
+    if skip_ifexist:
+      return
+  except ConfigNotExistError:
+    pass
 
   router_url = input('Router URL (e.g. http://192.168.0.1): ')
   password = getpass(prompt='Password: ')
