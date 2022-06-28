@@ -26,7 +26,7 @@ def interactive_config():
     # TODO: validate auth
     return
 
-  router_url = input('Router URL: ')
+  router_url = input('Router URL (e.g. http://192.168.0.1): ')
   password = getpass(prompt='Password: ')
 
   save_config(Config(
