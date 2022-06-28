@@ -6,19 +6,31 @@ CATV回線用インターネットモデムHUMAX HG100R-02JGをHTTP API経由で
 pip3 install aoirint-hg100rclient
 ```
 
-## Usage
+## Authentication
 
-### 認証情報の保存
+### 設定ファイル
+
+#### 認証情報の保存
 
 ```shell
 hg100r login
 ```
 
-### 認証情報の削除
+#### 認証情報の削除
 
 ```shell
 hg100r logout
 ```
+
+### 環境変数
+
+|key|example|
+|:--|:--|
+|HG100R_ROUTER_URL|http://192.168.15.1|
+|HG100R_PASSWORD|password|
+
+
+## Usage
 
 ### WAN側IPv4アドレスの取得
 
