@@ -11,6 +11,15 @@ class Config(BaseModel):
   password: str
 
 def load_config() -> Config:
+  env_router_url = os.environ.get('HG100R_ROUTER_URL')
+  env_password = os.environ.get('HG100R_PASSWORD')
+  if env_router_url or env_password:
+    assert env_router_url and env_password
+    return Config(
+      router_url=env_router_url,
+      password=env_password,
+    )
+
   if not CONFIG_PATH.exists():
     raise Exception('Config not exist. Call interactive_config()')
 
