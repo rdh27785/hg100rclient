@@ -21,8 +21,11 @@ def save_config(config: Config):
   with open(CONFIG_PATH, 'w', encoding='utf-8') as fp:
     fp.write(config.json())
 
-def interactive_config():
-  if CONFIG_PATH.exists():
+def remove_config():
+  CONFIG_PATH.unlink(missing_ok=True)
+
+def interactive_config(skip_ifexist: bool=True):
+  if skip_ifexist and CONFIG_PATH.exists():
     # TODO: validate auth
     return
 

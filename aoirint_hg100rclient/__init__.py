@@ -13,5 +13,6 @@ from .client import (
 from .config import (
   load_config,
   save_config,
+  remove_config,
   interactive_config,
 )

@@ -20,12 +20,12 @@ setup(
   packages=find_packages(),
   include_package_data=True,
 
-  # entry_points = {
-  #   'console_scripts': [
-  #     # create `main` function in PACKAGE_NAME/scripts/my_command_module.py
-  #     'my_command_name = PACKAGE_NAME.scripts.my_command_module:main',
-  #   ],
-  # },
+  entry_points = {
+    'console_scripts': [
+      # create `main` function in PACKAGE_NAME/scripts/my_command_module.py
+      'hg100r = aoirint_hg100rclient.script:main',
+    ],
+  },
 
   install_requires=install_requires,
 
