@@ -8,6 +8,7 @@ from aoirint_hg100rclient import __VERSION__ as VERSION
 install_requires: List[str] = [
   # dependencies like requirements.txt
   'requests', # https://pypi.org/project/requests/
+  'pydantic', # https://pypi.org/project/pydantic/
 ]
 
 setup(

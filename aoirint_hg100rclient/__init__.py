@@ -1,8 +1,17 @@
 __VERSION__ = '0.0.0'
 
-from .get_salt import get_salt
-from .get_hashed_password import get_hashed_password
-from .get_token import get_token
-from .get_token_with_raw_password import get_token_with_raw_password
-from .get_wan_ipv4 import get_wan_ipv4
-from .reboot_router import reboot_router
+from .client import (
+  HG100RClient,
+  get_salt,
+  get_hashed_password,
+  get_token,
+  get_token_with_raw_password,
+  get_wan_ipv4,
+  reboot_router,
+)
+
+from .config import (
+  load_config,
+  save_config,
+  interactive_config,
+)
