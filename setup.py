@@ -3,7 +3,7 @@ from typing import (
   List,
 )
 
-from aoirint_hg100rclient import __VERSION__ as VERSION
+from hg100rclient import __VERSION__ as VERSION
 
 install_requires: List[str] = [
   # dependencies like requirements.txt
@@ -12,7 +12,7 @@ install_requires: List[str] = [
 ]
 
 setup(
-  name='aoirint_hg100rclient',
+  name='hg100rclient',
   version=VERSION, # '0.1.0-alpha', # == 0.1.0-alpha0 == 0.1.0a0
   # license='MIT',
 
@@ -23,7 +23,7 @@ setup(
   entry_points = {
     'console_scripts': [
       # create `main` function in PACKAGE_NAME/scripts/my_command_module.py
-      'hg100r = aoirint_hg100rclient.script:main',
+      'hg100r = hg100rclient.script:main',
     ],
   },
 

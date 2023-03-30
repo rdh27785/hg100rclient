@@ -1,9 +1,9 @@
-# aoirint_hg100rclient
+# hg100rclient
 
 CATV回線用インターネットモデムHUMAX HG100R-02JGをHTTP API経由で操作するための非公式パッケージ。
 
 ```shell
-pip3 install aoirint-hg100rclient
+pip3 install hg100rclient
 ```
 
 ## Authentication
