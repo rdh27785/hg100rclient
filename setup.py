@@ -29,10 +29,10 @@ setup(
 
   install_requires=install_requires,
 
-  author='aoirint',
-  author_email='aoirint@gmail.com',
+  author='Seori Konno',
+  author_email='rdh27785@costodon.social',
 
-  url='https://github.com/aoirint/aoirint_hg100rclient',
+  url='https://github.com/rdh27785/hg100rclient',
   description='CATV回線用モデムHUMAX HG100R-02JGをHTTP API経由で操作するための非公式パッケージ',
 
   long_description=open('README.md', 'r').read(),
