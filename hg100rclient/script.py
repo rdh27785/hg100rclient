@@ -1,4 +1,4 @@
-from aoirint_hg100rclient import HG100RClient, interactive_config, remove_config
+from hg100rclient import HG100RClient, interactive_config, remove_config
 
 def command_login(args):
   interactive_config(skip_ifexist=False)
