@@ -1,3 +1,4 @@
+import os
 from aoirint_hg100rclient import HG100RClient, interactive_config, remove_config
 
 def command_login(args):
@@ -13,6 +14,14 @@ def command_wanipv4(args):
 
   ipv4_addr = hg100r.get_wan_ipv4()
   print(ipv4_addr)
+
+def command_wanipv6(args):
+  interactive_config()
+
+  hg100r = HG100RClient()
+
+  ipv6_addr = hg100r.get_wan_ipv6()
+  print(os.linesep.join(ipv6_addr))
 
 def command_reboot(args):
   interactive_config()
@@ -35,6 +44,9 @@ def main():
 
   parser_wanipv4 = subparsers.add_parser('wanipv4')
   parser_wanipv4.set_defaults(handler=command_wanipv4)
+
+  parser_wanipv6 = subparsers.add_parser('wanipv6')
+  parser_wanipv6.set_defaults(handler=command_wanipv6)
 
   parser_reboot = subparsers.add_parser('reboot')
   parser_reboot.set_defaults(handler=command_reboot)
