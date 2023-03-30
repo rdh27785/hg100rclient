@@ -40,6 +40,14 @@ hg100r wanipv4
 
 WAN未接続時は`0.0.0.0`を返却。
 
+### WAN側IPv6アドレスの取得
+
+```shell
+hg100r wanipv6
+```
+
+WAN未接続時は`Unspecified`を返却。
+
 ### モデム再起動
 
 ```shell
